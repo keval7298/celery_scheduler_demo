@@ -1,0 +1,10 @@
+Generic single-database configuration.
+
+To make changes to the SQLAlchemy database model definitions, you need to run the following migrations:
+
+```sh
+# Make sure that you have imported the new model files into the models/__init__.py file.
+# go into the docker terminal
+alembic revision --autogenerate -m "<commit-message>"
+alembic upgrade head
+```
